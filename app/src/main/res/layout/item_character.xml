@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp">
+
+    <ImageView
+        android:id="@+id/ivCharacterPhoto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/character_photo_content_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gPhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@android:drawable/star_off" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="90dp" />
+
+    <TextView
+        android:id="@+id/tvCharacterName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvCharacterNickname"
+        app:layout_constraintEnd_toStartOf="@id/gFav"
+        app:layout_constraintStart_toEndOf="@id/gPhoto"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Walter White" />
+
+    <TextView
+        android:id="@+id/tvCharacterNickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="?android:textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/gFav"
+        app:layout_constraintStart_toEndOf="@id/gPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/tvCharacterName"
+        tools:text="Heisenberg" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="60dp" />
+
+    <ImageView
+        android:id="@+id/ivCharacterFav"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:contentDescription="@string/character_fav_content_description"
+        android:focusable="true"
+        android:padding="5dp"
+        android:src="@drawable/ic_fav_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gFav"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

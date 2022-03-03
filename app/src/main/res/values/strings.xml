@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Breaking Bad</string>
+    <string name="character_photo_content_description">Character photo</string>
+    <string name="character_fav_content_description">Favorite character</string>
+</resources>
